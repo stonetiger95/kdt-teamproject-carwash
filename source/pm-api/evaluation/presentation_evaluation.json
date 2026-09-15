@@ -1,0 +1,142 @@
+{
+  "executed_at_local": "2026-09-01T10:58:08.721798",
+  "comparison_contract": {
+    "same_rows_for_both_models": true,
+    "april_rows": 10912,
+    "positive_rows": 835,
+    "devices": 17,
+    "april_labels_used_for_training": false,
+    "v2_frozen_prediction_raw_max_abs_error": 0.0,
+    "v2_frozen_prediction_calibrated_max_abs_error": 0.0
+  },
+  "v1": {
+    "version": "logistic-platt-v1",
+    "feature_count": 7,
+    "calibration": "platt",
+    "thresholds": {
+      "warning": 0.025,
+      "critical": 0.9995607309325284
+    },
+    "artifacts": {
+      "model_config.json": "d8e982e7baf5760dff020abf7188c23819fedf840274cc8d25ffe83d204550eb",
+      "pm_model.joblib": "e2c87e3c0fa99c23f05712cd1a5988df4b846d6c418c19204e6ceecacbb25f0f",
+      "pm_calibrator.joblib": "b7cb09e7e4772a6c649bff9d0919e5d56395b604de6d4cafd9c02a81d6dd6882"
+    }
+  },
+  "v2": {
+    "version": "logistic-v2-candidate",
+    "feature_count": 13,
+    "calibration": "isotonic",
+    "training_period": "2026-01-01 through 2026-03-31",
+    "evaluation_period": "2026-04-01 through 2026-04-30",
+    "thresholds": {
+      "warning": 0.2,
+      "critical": 0.532871972318339
+    },
+    "production_activation_allowed": false,
+    "artifacts": {
+      "selected_model_config.json": "50b32f8bb5570513036d174117e4ebe24c7e1dcb698e299f9889c0648484b5cc",
+      "pm_calibrator_v2_candidate.joblib": "dbe2c70fa3bfafdecfaed82e9b79dd7c7c824c3128b662cea933066577870f36"
+    }
+  },
+  "metrics": [
+    {
+      "model": "current_v1_calibrated",
+      "feature_count": 7,
+      "calibration": "platt",
+      "rows": 10912,
+      "positive_rows": 835,
+      "pr_auc": 0.21360777522425173,
+      "roc_auc": 0.7389643457948646,
+      "brier": 0.08494694210096813,
+      "log_loss": 0.39157293579915775,
+      "ece_10": 0.07245605732790893
+    },
+    {
+      "model": "candidate_v2_raw",
+      "feature_count": 13,
+      "calibration": "uncalibrated",
+      "rows": 10912,
+      "positive_rows": 835,
+      "pr_auc": 0.3574630449233016,
+      "roc_auc": 0.7869918989053748,
+      "brier": 0.19731983816284362,
+      "log_loss": 0.7825524528418409,
+      "ece_10": 0.3132975990345669
+    },
+    {
+      "model": "candidate_v2_operational",
+      "feature_count": 13,
+      "calibration": "isotonic",
+      "rows": 10912,
+      "positive_rows": 835,
+      "pr_auc": 0.2680448040504996,
+      "roc_auc": 0.7694421220078449,
+      "brier": 0.07165148562465681,
+      "log_loss": 0.26819541010987064,
+      "ece_10": 0.06028362268890247
+    }
+  ],
+  "threshold_metrics": [
+    {
+      "model": "current_v1",
+      "level": "warning",
+      "threshold": 0.025,
+      "row_precision": 0.22560145256468453,
+      "row_recall": 0.5952095808383233,
+      "row_f2": 0.448313187804438,
+      "alert_rows": 2203,
+      "alert_episodes": 112,
+      "failure_events": 5,
+      "detected_events": 3,
+      "event_recall": 0.6,
+      "false_alert_episodes": 106,
+      "false_alerts_per_device_month": 6.235294117647059
+    },
+    {
+      "model": "current_v1",
+      "level": "critical",
+      "threshold": 0.9995607309325284,
+      "row_precision": 0.11956521739130435,
+      "row_recall": 0.013173652694610778,
+      "row_f2": 0.016025641025641024,
+      "alert_rows": 92,
+      "alert_episodes": 69,
+      "failure_events": 5,
+      "detected_events": 4,
+      "event_recall": 0.8,
+      "false_alert_episodes": 62,
+      "false_alerts_per_device_month": 3.6470588235294117
+    },
+    {
+      "model": "candidate_v2",
+      "level": "warning",
+      "threshold": 0.2,
+      "row_precision": 0.27938071780436313,
+      "row_recall": 0.4754491017964072,
+      "row_f2": 0.41692921655114473,
+      "alert_rows": 1421,
+      "alert_episodes": 65,
+      "failure_events": 5,
+      "detected_events": 4,
+      "event_recall": 0.8,
+      "false_alert_episodes": 59,
+      "false_alerts_per_device_month": 3.4705882352941178
+    },
+    {
+      "model": "candidate_v2",
+      "level": "critical",
+      "threshold": 0.532871972318339,
+      "row_precision": 0.3279158699808795,
+      "row_recall": 0.41077844311377243,
+      "row_f2": 0.3910168718650251,
+      "alert_rows": 1046,
+      "alert_episodes": 41,
+      "failure_events": 5,
+      "detected_events": 4,
+      "event_recall": 0.8,
+      "false_alert_episodes": 37,
+      "false_alerts_per_device_month": 2.176470588235294
+    }
+  ]
+}

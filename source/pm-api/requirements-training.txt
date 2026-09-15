@@ -1,0 +1,6 @@
+# Offline training dependencies for the v3 Logistic v2 candidate.
+-r requirements-preprocessing.txt
+scikit-learn==1.7.2
+joblib
+tabulate
+

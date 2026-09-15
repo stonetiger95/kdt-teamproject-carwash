@@ -1,0 +1,6 @@
+# Offline v3 preprocessing dependencies.
+# Versions match the plate310 environment used to verify the canonical output.
+numpy==2.2.6
+pandas==2.3.3
+pyarrow==24.0.0
+pytest

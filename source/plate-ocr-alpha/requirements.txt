@@ -1,0 +1,25 @@
+# Python 3.10 recommended.
+# Minimal alpha-test dependencies for:
+# FastAPI + YOLO plate detection + PyTorch PlateCNNCTC OCR.
+
+fastapi==0.115.6
+uvicorn[standard]==0.34.0
+python-multipart==0.0.20
+
+opencv-python==4.10.0.84
+numpy==1.26.4
+pillow==11.0.0
+
+torch==2.5.1
+torchvision==0.20.1
+ultralytics==8.3.59
+
+# Predictive-maintenance model dependencies.
+joblib
+pandas
+scikit-learn==1.7.2
+pyarrow==24.0.0
+
+
+pytest
+httpx

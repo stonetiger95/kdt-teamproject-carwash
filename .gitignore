@@ -1,0 +1,67 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+application.yml
+application.yaml
+application-*.yml
+application-*.yaml
+!application.example.yml
+!application.example.yaml
+
+# Raw data, local databases, logs, and uploads
+data/
+datasets/
+raw_data/
+uploads/
+logs/
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.sql
+*.csv
+*.tsv
+*.parquet
+*.xlsx
+*.xls
+
+# Model weights and generated artifacts
+weights/
+models/
+artifacts/
+checkpoints/
+runs/
+*.pt
+*.pth
+*.onnx
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+*.joblib
+
+# Keep the two aggregate evaluation tables used as portfolio evidence
+!source/pm-api/evaluation/presentation_model_comparison.csv
+!source/pm-api/evaluation/presentation_threshold_comparison.csv
+
+# Build and dependency outputs
+.gradle/
+build/
+out/
+node_modules/
+dist/
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+
+# IDE and operating-system files
+.idea/
+.vscode/
+*.iml
+__MACOSX/
+._*
+.DS_Store
+Thumbs.db

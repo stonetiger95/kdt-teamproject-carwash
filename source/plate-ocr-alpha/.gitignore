@@ -1,0 +1,35 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ultralytics/
+
+.env
+.venv/
+venv/
+
+# Do not commit model weights.
+weights/*
+!weights/.gitkeep
+*.pt
+*.pth
+*.onnx
+
+# Final deployment weights are intentionally versioned for team distribution.
+!weights/best.pt
+!weights/lite050_best.pt
+
+# Do not commit images, datasets, or generated outputs.
+file/
+sample_images/
+outputs/
+temp/
+runs/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.webp
+*.zip
+*.csv
+*.xlsx
+*.docx

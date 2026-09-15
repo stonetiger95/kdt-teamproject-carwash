@@ -1,0 +1,50 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '4.0.8-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.1.7'
+}
+
+group = 'kdt'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url = 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'org.springframework.boot:spring-boot-starter-actuator'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:4.0.1'
+	runtimeOnly 'io.micrometer:micrometer-registry-prometheus'
+	implementation 'com.solapi:sdk:1.1.0'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	runtimeOnly 'org.postgresql:postgresql'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-security-test'
+	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
+	testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:4.0.1'
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	// Source: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api
+	implementation 'io.jsonwebtoken:jjwt-api:0.13.0'
+	// Source: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-impl
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.13.0'
+	// Source: https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-jackson
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.13.0'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
