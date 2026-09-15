@@ -2,7 +2,11 @@
 
 > AI 번호판 인식을 입차·예약·세차·결제·출차와 관리자 검수까지 연결한 무정차 자동 세차 운영 프로토타입
 
-지원용 요약: [AI 서비스 개발 엔지니어 1페이지 포트폴리오](SUBMISSION_PORTFOLIO.md)
+## 문서형 포트폴리오
+
+- [제출용 PDF 포트폴리오](output/pdf/CLOUDWASH_Portfolio_LeeSeokbeom.pdf)
+- [편집 가능한 Word 포트폴리오](output/docx/CLOUDWASH_Portfolio_LeeSeokbeom.docx)
+- [AI 서비스 개발 엔지니어 1페이지 요약](SUBMISSION_PORTFOLIO.md)
 
 ## 프로젝트 요약
 
