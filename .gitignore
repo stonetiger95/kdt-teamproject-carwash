@@ -44,6 +44,7 @@ runs/
 # Keep the two aggregate evaluation tables used as portfolio evidence
 !source/pm-api/evaluation/presentation_model_comparison.csv
 !source/pm-api/evaluation/presentation_threshold_comparison.csv
+!evidence/ocr/*.csv
 
 # Build and dependency outputs
 .gradle/

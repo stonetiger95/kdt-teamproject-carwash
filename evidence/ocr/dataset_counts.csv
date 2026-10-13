@@ -1,0 +1,12 @@
+dataset,source_rows,selection_or_split,portfolio_rows
+AI Hub train,80000,regular plate regex,55103
+AI Hub validation,10000,regular plate regex,6819
+AI Hub selected total,90000,regular plate regex,61922
+Real-world train and validation,9000,manifest split,9000
+Real-world locked test,1000,manifest split,1000
+Real-world total,10000,manifest split,10000
+YOLO original train,8529,before hard samples,8529
+YOLO hard sample batch 1,200,relabeled failures,200
+YOLO hard sample batch 2,200,relabeled failures,200
+YOLO hard sample batch 3,332,relabeled failures,332
+YOLO integrated train,9261,original plus hard samples,9261

@@ -1,0 +1,3 @@
+model_id,decoder,total_parameters,trainable_parameters,input_shape,output_shape,charset_size,blank_index
+stn_crnn,greedy,2453293,2453293,"1,1,48,192","24,1,55",54,54
+lite050,beam5_format,1140503,1140503,"1,1,48,192","24,1,55",54,54
